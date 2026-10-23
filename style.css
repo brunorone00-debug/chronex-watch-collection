@@ -1,0 +1,173 @@
+:root {
+  --bg: #0a0a0a;
+  --line: #1a1a1a;
+  --text: #eaeaea;
+  --accent: #b0b0b0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* GRID BACKGROUND */
+.grid-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 60px;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-family: 'Libre Baskerville', serif;
+  letter-spacing: 2px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  color: var(--accent);
+}
+
+
+/* HERO */
+.hero {
+  background: #f5f5f5;
+  color: #222;
+  padding: 60px 20px 40px 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-left h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+.hero-left p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+.watch-images {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.watch-images img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.watch-images img:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+/* Fade-in animation classes */
+.fade-init {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--accent);
+}
+
+/* COLLECTION */
+.collection {
+  padding: 100px 60px;
+}
+
+.collection h2 {
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  gap: 40px;
+}
+
+.card {
+  flex: 1;
+  cursor: pointer;
+}
+
+.img {
+  height: 300px;
+  background-size: cover;
+  margin-bottom: 15px;
+  filter: grayscale(100%);
+  transition: 0.4s;
+}
+
+.card:hover .img {
+  filter: grayscale(0%);
+}
+
+.img1 {
+  background-image: url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d');
+}
+.img2 {
+  background-image: url('https://images.unsplash.com/photo-1524592094714-0f0654e20314');
+}
+.img3 {
+  background-image: url('https://images.unsplash.com/photo-1508057198894-247b23fe5ade');
+}
+
+/* STATEMENT */
+.statement {
+  text-align: center;
+  padding: 140px 20px;
+}
+
+.statement h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 50px;
+  opacity: 0.8;
+}
